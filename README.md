@@ -1,6 +1,6 @@
 # Annex
 
-An open-source credential management platform.
+An open-source security platform for running AI Agents locally.
 
 ## Structure
 
