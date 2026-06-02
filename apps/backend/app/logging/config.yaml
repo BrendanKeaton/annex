@@ -1,0 +1,22 @@
+version: 1
+
+formatters:
+  json:
+    format: '{"message": "%(message)s"}'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: json
+    stream: ext://sys.stdout
+
+loggers:
+  annex:
+    level: INFO
+    handlers: [console]
+    propagate: no
+
+root:
+  level: WARNING
+  handlers: [console]
