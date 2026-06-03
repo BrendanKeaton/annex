@@ -1,0 +1,8 @@
+volumes/db/data
+volumes/storage
+.env
+test.http
+docker-compose.override.yml
+
+# local backups (may contain removed schemas) — never commit
+schema/*.bak

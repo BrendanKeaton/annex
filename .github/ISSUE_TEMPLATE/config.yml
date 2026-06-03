@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    # Update <owner>/<repo> to your GitHub slug before release.
+    url: https://github.com/<owner>/<repo>/security/policy
+    about: Please report security issues privately — see SECURITY.md, do NOT open a public issue.

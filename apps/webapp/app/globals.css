@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+@theme {
+  --color-annex-purple: #b125ff;
+  --color-annex-background: #141315;
+  --color-annex-dark-purple: #32004e;
+  --color-annex-light-purple: #c969ff;
+  --color-annex-white: #ffffff;
+  --color-annex-black: #0d0d0d;
+  --color-annex-light-gray: #636363;
+  --color-annex-dark-gray: #7a7a7a;
+  --color-annex-light-red: #ff696c;
+  --color-annex-dark-red: #4e0001;
+  --color-annex-light-yellow: #ffec87;
+  --color-annex-dark-yellow: #554400;
+  --color-annex-light-green: #91ff87;
+  --color-annex-dark-green: #005503;
+  --color-annex-background-light: #1e1c1f;
+  --color-annex-border-light: #8b8b8b;
+
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, monospace;
+
+  --default-border-width: 0.5px;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="checkbox"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .font-sans {
+    @apply font-light text-xl md:text-3xl text-annex-white tracking-normal;
+    font-family: var(--font-sans), sans-serif;
+  }
+
+  .font-mono {
+    @apply tracking-[0.08em] text-sm text-annex-white;
+    font-family: var(--font-mono), monospace;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: var(--font-mono);
+    letter-spacing: -0.03em;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 150ms ease-out both;
+  }
+
+  .animate-dropdown {
+    animation: dropdown 100ms ease-out both;
+  }
+
+  .animate-rowIn {
+    animation: rowIn 120ms ease-out both;
+  }
+
+  .animate-spin-moderate {
+    animation: spin-moderate 1.2s linear infinite;
+  }
+
+  .animate-ring-spin {
+    animation: ring-spin 28s linear infinite;
+  }
+
+  .animate-caret-1 {
+    animation: caret-pulse 1.5s ease-in-out infinite;
+  }
+
+  .animate-caret-2 {
+    animation: caret-pulse 1.5s ease-in-out 0.3s infinite;
+  }
+
+  .animate-caret-3 {
+    animation: caret-pulse 1.5s ease-in-out 0.6s infinite;
+  }
+
+  .animate-pin-backdrop {
+    animation: pin-backdrop 200ms ease-out both;
+  }
+
+  .animate-pin-modal {
+    animation: pin-modal 350ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-pin-digit-pop {
+    animation: pin-digit-pop 200ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  .animate-pin-shake {
+    animation: pin-shake 400ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  .animate-pin-error-in {
+    animation: pin-error-in 200ms ease-out both;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rowIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin-moderate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ring-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes caret-pulse {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(2px);
+  }
+}
+
+@keyframes pin-backdrop {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes pin-modal {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pin-digit-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pin-digit-pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pin-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-4px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes pin-error-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes recovery-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
