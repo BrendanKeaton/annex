@@ -9,6 +9,6 @@ gunicorn==23.0.0
 python-dotenv==1.2.2
 pyyaml>=6.0
 cryptography>=42.0
-email-validator==2.2.0
+email-validator==2.3.0
 pytest==8.3.5
 httpx==0.28.1
