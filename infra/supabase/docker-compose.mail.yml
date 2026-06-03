@@ -1,0 +1,24 @@
+# Local development mail catcher (Mailpit).
+#
+# Captures every email GoTrue tries to send (signup confirmations, invites,
+# password recovery, email-change) instead of delivering them, and shows them
+# in a web UI. Nothing leaves your machine.
+#
+# Enabled via COMPOSE_FILE in .env:
+#   COMPOSE_FILE=docker-compose.yml:docker-compose.mail.yml
+#
+# GoTrue reaches it at supabase-mail:1025 (SMTP_HOST/SMTP_PORT in .env).
+# View captured mail at http://localhost:8025
+#
+# Do NOT use this in production — configure a real SMTP provider instead
+# (see RUNBOOK.md "Email / SMTP").
+services:
+  supabase-mail:
+    container_name: supabase-mail
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    ports:
+      - "8025:8025"   # web UI (SMTP on 1025 stays internal to the docker network)
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: "true"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "true"
