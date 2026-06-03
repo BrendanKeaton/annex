@@ -77,7 +77,7 @@ class TestAcceptInviteRequest:
 
 class TestAccountModels:
     def test_update_email_valid(self):
-        req = UpdateEmailRequest(new_email="new@example.com")
+        req = UpdateEmailRequest(new_email="new@example.com", pin="123456")
         assert req.new_email == "new@example.com"
 
     def test_update_password_too_short(self):
@@ -85,7 +85,7 @@ class TestAccountModels:
             UpdatePasswordRequest(new_password="short")
 
     def test_update_password_valid(self):
-        req = UpdatePasswordRequest(new_password="NewStr0ng!")
+        req = UpdatePasswordRequest(new_password="NewStr0ng!", pin="123456")
         assert req.new_password == "NewStr0ng!"
 
 

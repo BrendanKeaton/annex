@@ -20,7 +20,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; connect-src 'self' http://localhost:8000 https://*.supabase.co; style-src 'self' 'unsafe-inline'; img-src 'self' asset: data: https://*.supabase.co; script-src 'self'; font-src 'self' data:; object-src 'none'; frame-src 'none'"
+      "csp": "default-src 'self'; connect-src 'self' http://localhost:8000 http://localhost:54321; style-src 'self' 'unsafe-inline'; img-src 'self' asset: data: http://localhost:54321; script-src 'self'; font-src 'self' data:; object-src 'none'; frame-src 'none'"
     }
   },
   "plugins": {

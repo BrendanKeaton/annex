@@ -213,12 +213,12 @@ export default function Session() {
       <div class="@container flex flex-row xl:px-20 items-center gap-x-6 justify-between animate-fadeIn flex-1">
         <div class="flex-col gap-y-32 flex-1 hidden xl:flex">
           <div class="flex flex-col gap-y-4">
-            <h1 class="font-mono font-semibold text-3xl md:text-5xl">
+            <h1 class="font-mono font-semibold text-3xl md:text-4xl 2xl:text-5xl">
               {headerText()}
             </h1>
             <p>
-              Prevent AI assistants from accessing sensitive files by <br />{" "}
-              encrypting them during active sessions.
+              Prevent AI assistants from accessing sensitive files by encrypting
+              them during active sessions.
             </p>
             <p class="text-annex-light-purple">
               {lastSessionText()
@@ -238,9 +238,7 @@ export default function Session() {
             <a
               class="py-1 max-w-64 hover:text-annex-white items-end transition duration-150 underline underline-offset-4 text-annex-dark-gray text-sm cursor-pointer flex flex-row gap-x-1"
               onClick={() =>
-                openUrl(
-                  "https://github.com/your-org/annex#security",
-                )
+                openUrl("https://github.com/your-org/annex#security")
               }
             >
               Technical Documentation

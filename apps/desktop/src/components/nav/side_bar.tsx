@@ -1,7 +1,6 @@
 import { useLocation } from "@solidjs/router";
 import { Show } from "solid-js";
 import Drag_and_Drop from "../upload_methods/drag_and_drop";
-import annex_icon from "../../assets/annex_icon.svg";
 import HouseIcon from "../icons/house";
 import TreeIcon from "../icons/tree";
 import CounterClockWiseClockIcon from "../icons/clock_counter_clockwise";
@@ -23,7 +22,6 @@ export default function Sidebar() {
     <nav class="flex flex-col h-screen justify-between pl-8 pr-4 py-8">
       <div class="flex flex-col">
         <div class="mb-9 flex items-center gap-2 mt-1 font-mono text-lg leading-0">
-          <img src={annex_icon} class="w-5 h-5" alt="Annex" />
           Annex
         </div>
         <div class="flex flex-col gap-y-1 text-annex-dark-gray text-lg font-light">
