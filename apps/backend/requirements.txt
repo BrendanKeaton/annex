@@ -3,7 +3,7 @@ fastapi-cli==0.0.7
 supabase==2.27.1
 slowapi==0.1.9
 bcrypt==4.3.0
-python-multipart==0.0.22
+python-multipart==0.0.30
 uvicorn==0.41.0
 gunicorn==23.0.0
 python-dotenv==1.2.2
