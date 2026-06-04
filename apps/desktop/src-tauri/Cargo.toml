@@ -37,7 +37,7 @@ aes-gcm = "0.10"
 aead = { version = "0.5", features = ["stream", "alloc"] }
 rand = "0.8"
 sha2 = "0.10"
-dirs = "5"
+dirs = "6"
 
 [target.'cfg(windows)'.dependencies]
 windows-sys = { version = "0.59", features = ["Win32_System_IO", "Win32_Foundation"] }
