@@ -5,7 +5,7 @@ slowapi==0.1.9
 bcrypt==4.3.0
 python-multipart==0.0.22
 uvicorn==0.41.0
-gunicorn==23.0.0
+gunicorn==26.0.0
 python-dotenv==1.2.2
 pyyaml>=6.0
 cryptography>=42.0
